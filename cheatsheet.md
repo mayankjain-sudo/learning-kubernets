@@ -22,3 +22,5 @@ kubectl replace -f replicaset-definition.yaml
 or 
 kubectl scale --replicas=6 -f replicaset-definition.yaml
 or kubectl scale --replicas=6 replicaset(type) myapp-replicaset(Name of replicaset)
+### To delete replicaset
+kubectl delete replicaset <Name of Replicaset>
