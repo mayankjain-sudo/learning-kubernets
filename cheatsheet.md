@@ -13,3 +13,12 @@ kubectl create -f nginxpod.yaml
 kubectl apply -f nginxpod.yaml
 ## To create YAML file from command and run a pod 
 kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx-definition.yaml
+### To view list of replication controller 
+kubectl get replicationcontroller
+### To view list of replica set 
+kubectl get replicaset
+### To update the replicaset, change in the yaml file then run.
+kubectl replace -f replicaset-definition.yaml
+or 
+kubectl scale --replicas=6 -f replicaset-definition.yaml
+or kubectl scale --replicas=6 replicaset(type) myapp-replicaset(Name of replicaset)
