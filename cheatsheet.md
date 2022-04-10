@@ -19,8 +19,11 @@ kubectl get replicationcontroller
 kubectl get replicaset
 ### To update the replicaset, change in the yaml file then run.
 kubectl replace -f replicaset-definition.yaml
-or 
+#### or 
 kubectl scale --replicas=6 -f replicaset-definition.yaml
-or kubectl scale --replicas=6 replicaset(type) myapp-replicaset(Name of replicaset)
+#### or 
+kubectl scale replicaset --replicas=2 myapp-replicaset(Name of replicaset)
+#### or
+kubectl edit replicaset (replicasetName)
 ### To delete replicaset
-kubectl delete replicaset <Name of Replicaset>
+kubectl delete replicaset (Name of Replicaset)
