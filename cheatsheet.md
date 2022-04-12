@@ -27,3 +27,15 @@ kubectl scale replicaset --replicas=2 myapp-replicaset(Name of replicaset)
 kubectl edit replicaset (replicasetName)
 ### To delete replicaset
 kubectl delete replicaset (Name of Replicaset)
+### To create deployment
+kubectl create -f deployment.yaml
+### To delete deployment 
+kubectl delete deployment deploymentName
+### To get details of deployment
+kubectl describe deployment deploymentName
+### To get all the elements of kubernetes 
+kubectl get all 
+### To check status of rollout
+kubectl rollout status deployment/myapp-deployment
+### To check revision or history of deployment 
+kubectl rollout history deployment/myapp-deployment
